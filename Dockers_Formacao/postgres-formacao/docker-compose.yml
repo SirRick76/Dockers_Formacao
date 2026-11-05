@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: postgres-formacao
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: formando
+      POSTGRES_PASSWORD: formando123
+      POSTGRES_DB: dataanalyst
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+      - ./init:/docker-entrypoint-initdb.d   # scripts .sql executados na 1.ª criação
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-formacao
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@formacao.pt
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:

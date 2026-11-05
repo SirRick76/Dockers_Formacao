@@ -1,0 +1,33 @@
+name: postgres-formacao
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres-formacao
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: Admin123!
+      POSTGRES_DB: formacao
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin-formacao
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@formacao.pt
+      PGADMIN_DEFAULT_PASSWORD: Admin123!
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+  pgadmin_data:
