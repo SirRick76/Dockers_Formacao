@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: md_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./dados:/dados
+ 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: md_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+ 
+volumes:
+  pgdata:

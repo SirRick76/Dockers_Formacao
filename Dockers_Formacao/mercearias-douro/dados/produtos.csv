@@ -1,0 +1,26 @@
+cod_produto;nome_produto;categoria;preco_tabela
+P001;Pão de forma;Padaria;1,49
+P002;Broa de milho;Padaria;2,20
+P003;Leite meio-gordo 1L;Laticínios;0,89
+P004;Iogurte natural (4 un.);Laticínios;1,69
+P005;Queijo da Serra 250g;Laticínios;8,90
+P006;Manteiga 250g;Laticínios;2,79
+P007;Ovos (12 un.);Mercearia;2,99
+P008;Arroz carolino 1kg;Mercearia;1,35
+P009;Massa esparguete 500g;Mercearia;0,95
+P010;Azeite virgem extra 750ml;Mercearia;7,49
+P011;Feijão encarnado 500g;Mercearia;1,59
+P012;Atum em azeite;Conservas;1,89
+P013;Sardinhas em tomate;Conservas;1,65
+P014;Café moído 250g;Bebidas;3,49
+P015;Água 1,5L;Bebidas;0,39
+P016;Vinho do Porto Tawny;Bebidas;11,90
+P017;Vinho tinto Douro DOC;Bebidas;6,50
+P018;Sumo de laranja 1L;Bebidas;1,79
+P019;Maçã de Armamar (kg);Frutas e legumes;1,49
+P020;Batata (kg);Frutas e legumes;0,99
+P021;Cebola (kg);Frutas e legumes;1,19
+P022;Tomate (kg);Frutas e legumes;1,89
+P023;Bacalhau graúdo (kg);Peixaria;13,90
+P024;Presunto fatiado 100g;Charcutaria;3,20
+P025;Chouriço de carne;Charcutaria;4,50
